@@ -12,13 +12,13 @@ int main() {
   SetExitKey(KEY_NULL);
   InitAudioDevice();
 
-  rlImGuiSetup(false);
+  rlImGuiSetup(true);
 
   ImGui::GetStyle().FontScaleMain = 2;
 
   while (!WindowShouldClose()) {
     BeginDrawing();
-    ClearBackground(WHITE);
+    ClearBackground(GetColor(0x181818FF));
 
     rlImGuiBegin();
 
