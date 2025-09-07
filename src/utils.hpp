@@ -24,3 +24,19 @@ inline bool InputTextString(const char *label, std::string *str,
       str->empty() ? (char *)"" : &(*str)[0], // works for C++11+
       str->capacity() + 1, flags, InputTextCallback, (void *)str);
 }
+
+inline ImVec2 operator+(ImVec2 a, ImVec2 b) {
+  return ImVec2(a.x + b.x, a.y + b.y);
+}
+
+inline ImVec2 operator+(ImVec2 a, int b) { return ImVec2(a.x + b, a.y + b); }
+
+inline ImVec2 operator-(ImVec2 a, ImVec2 b) {
+  return ImVec2(a.x - b.x, a.y - b.y);
+}
+
+inline ImVec2 operator/(ImVec2 a, int b) {
+  if (b == 0)
+    return ImVec2(0, 0);
+  return ImVec2(a.x / b, a.y / b);
+}
