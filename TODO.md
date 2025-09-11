@@ -2,7 +2,7 @@
     - [x] Calculator App – Basic arithmetic with a neat layout.
     - [x] To-Do List – Add, edit, delete tasks with checkboxes.
     - [x] Stopwatch/Timer – Start, pause, reset with a simple interface.
-    - [ ] Unit Converter – Convert between length, weight, currency, temperature, etc.
+    - [x] Unit Converter – Convert between length, weight, currency, temperature, etc.
     - [ ] Notepad Clone – Text editor with save/load functionality.
 
 🟡 [ ]  Intermediate
