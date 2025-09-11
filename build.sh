@@ -5,7 +5,7 @@ set -u
 set -e
 
 Mode=Debug # Release or Debug
-RunAfterBuild=1 # If != 0 then run the project executable after building
+RunAfterBuild=0 # If != 0 then run the project executable after building
 
 if ! command -v command &> /dev/null
 then
