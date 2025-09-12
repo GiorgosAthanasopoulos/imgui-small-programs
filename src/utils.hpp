@@ -25,6 +25,20 @@ inline bool InputTextString(const char *label, std::string *str,
       str->capacity() + 1, flags, InputTextCallback, (void *)str);
 }
 
+inline bool InputTextMultilineString(const char *label, std::string *str,
+                                     ImVec2 size = {0, 0},
+                                     ImGuiInputTextFlags flags = 0) {
+
+  // Always add resize flag
+  flags |= ImGuiInputTextFlags_CallbackResize;
+
+  // Make sure string has capacity for null terminator
+  return ImGui::InputTextMultiline(
+      label,
+      str->empty() ? (char *)"" : &(*str)[0], // works for C++11+
+      str->capacity() + 1, size, flags, InputTextCallback, (void *)str);
+}
+
 inline ImVec2 operator+(ImVec2 a, ImVec2 b) {
   return ImVec2(a.x + b.x, a.y + b.y);
 }

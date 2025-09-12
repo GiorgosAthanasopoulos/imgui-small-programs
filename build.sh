@@ -5,7 +5,7 @@ set -u
 set -e
 
 Mode=Debug # Release or Debug
-RunAfterBuild=0 # If != 0 then run the project executable after building
+RunAfterBuild=1 # If != 0 then run the project executable after building
 
 if ! command -v command &> /dev/null
 then
@@ -59,7 +59,7 @@ EXEC=$BUILD_DIR/$1
 
 SRC=src/$1.cpp
 
-CFLAGS="-Wall -Wextra"
+CFLAGS="-Wall -Wextra -std=c++20"
 if [[ $Mode == "Debug" ]]
 then
     CFLAGS="$CFLAGS -ggdb"

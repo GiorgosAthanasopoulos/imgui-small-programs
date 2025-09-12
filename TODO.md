@@ -3,7 +3,7 @@
     - [x] To-Do List – Add, edit, delete tasks with checkboxes.
     - [x] Stopwatch/Timer – Start, pause, reset with a simple interface.
     - [x] Unit Converter – Convert between length, weight, currency, temperature, etc.
-    - [ ] Notepad Clone – Text editor with save/load functionality.
+    - [x] Notepad Clone – Text editor with save/load functionality.
 
 🟡 [ ]  Intermediate
     - [ ] Weather Dashboard – Fetch live weather data via an API and show it nicely.
